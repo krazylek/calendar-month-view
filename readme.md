@@ -1,4 +1,4 @@
-# calendar-month-array
+# calendar-month-view
 
 Generates a html calendar 
 

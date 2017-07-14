@@ -1,0 +1,74 @@
+/** very basic calendar styling */
+table.calendar-block {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid rgba(0,0,0,.05);
+  width: 100%;
+  height: 100%;
+}
+
+.calendar-block td,
+.calendar-block th {
+  font-size: 1em;
+  line-height: 1.8em;
+  height: 2.2em; 
+  min-width: 1em;
+  text-align:center;
+  border: 1px solid rgba(0,0,0,.05);
+}
+
+.calendar-inactive { 
+	color: rgba(0,0,0,.2); 
+}
+
+/** page style */
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.calendar-container {
+  font-weight: 100;
+  min-width: 340px;
+}
+
+.calendar-block th {
+  line-height: 2.6em;
+  color: #fff;
+  background-color: #03a9f4;
+  font-variant: small-caps;
+}
+
+/** some optional day customization */
+.calendar-block .event span {,
+  font-weight: 700;
+  border-radius: 50%;
+  height: 1.8em;
+  width: 1.8em;
+  display: inline-block;
+  box-shadow: 0 1px 2px rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.2), 0 1px 8px 0 rgba(0,0,0,.12);
+}
+
+.calendar-block .blue span {
+  background-color: #1e88e5;
+  color: #fff;
+}
+
+.calendar-block .gray span {
+  background-color: #757575;
+  color: #fff;
+}
+
+.calendar-block .green span {
+  background-color: #558B2F;
+  color: #fff;
+}
+
+.calendar-block .yellow span {
+  background-color: #ffeb3b;
+}
+
+.calendar-block .selected {
+  background-color: #67daff;
+}

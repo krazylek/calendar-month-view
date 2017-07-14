@@ -1,0 +1,21 @@
+{
+  "name": "calendar-view",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*",
+    "example": "wzrd example/index.js --path example"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.7.0",
+    "wzrd": "^1.5.0"
+  },
+  "dependencies": {
+    "bel": "^5.0.2",
+    "calendar-month-array": "^2.0.0",
+    "d3-time-format": "^2.0.5"
+  }
+}

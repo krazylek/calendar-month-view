@@ -1,5 +1,5 @@
 {
-  "name": "calendar-view",
+  "name": "calendar-month-view",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "tape test/*",
     "example": "wzrd example/index.js --path example"
   },
-  "author": "",
+  "author": "krazylek (http://pohl.fr)",
   "license": "MIT",
   "devDependencies": {
     "tape": "^4.7.0",

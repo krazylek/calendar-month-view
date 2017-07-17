@@ -1,21 +1,17 @@
 var html = require('bel')
 
 module.exports = {
-  headerContent,
-  dateContent,
-  siblingMonthDateContent: dateContent,
-  containerTemplate,
-  headerTemplate,
-  dateTemplate,
-  siblingMonthDateTemplate: dateTemplate
+  headerContent: headerContent,
+  dateContent: dateContent,
+  containerTemplate: containerTemplate,
+  headerTemplate: headerTemplate,
+  dateTemplate: dateTemplate,
 }
 
 function headerTemplate(content, options) { 
   if(options.noHeader)
     return
-  return function(date, position) { 
-    return html`<th>${content(date, position)}</th>`
-  }
+  return html`<th>${content}</th>`
 }
 
 function headerContent(date) { 
@@ -33,9 +29,7 @@ function dateTemplate(content, options)  {
       classList = classList.concat(options.selected[day])
     }
 
-    var element = html`<td>
-      ${content(date, info)}
-    </td>`
+    var element = html`<td>${content}</td>`
     if(classList.length)
       element.className = classList.join(' ')
 
@@ -51,12 +45,13 @@ function containerTemplate(month, options)  {
   var className = options.classPrefix + 'block'
   var headers = html`
     <tr>
-      ${month.slice(0,1)}
+      ${month[0]}
     </tr>`
   var weeks = month.slice(1).map(row => html`
     <tr>
       ${row}
     </tr>`)
+
   return html`
     <table class="${className}">
       ${options.noHeader ? null : headers} 

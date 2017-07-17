@@ -13,8 +13,8 @@ module.exports = {
 function headerTemplate(content, options) { 
   if(options.noHeader)
     return
-  return function(date) { 
-    return html`<th>${content(date)}</th>`
+  return function(date, position) { 
+    return html`<th>${content(date, position)}</th>`
   }
 }
 

@@ -31,6 +31,8 @@ Return a html table element for the month given in `date`, a `Date` instance.
 
 ...
 
+## I18N
+
 
 # Advanced customization
 

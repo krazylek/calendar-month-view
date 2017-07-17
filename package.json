@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "tape test/*",
-    "example": "wzrd example/index.js --path example"
+    "example": "wzrd example/index.js --path example -- -t sheetify/transform"
   },
   "author": "krazylek (http://pohl.fr)",
   "license": "MIT",
@@ -16,6 +16,7 @@
   "dependencies": {
     "bel": "^5.0.2",
     "calendar-month-array": "^2.0.0",
-    "d3-time-format": "^2.0.5"
+    "d3-time-format": "^2.0.5",
+    "sheetify": "^6.1.0"
   }
 }

@@ -1,0 +1,9 @@
+.calendar-container.multiple {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.calendar-container.multiple > div {
+  min-width: 300px;
+}

@@ -1,0 +1,4 @@
+.calendar-container.date-selection .selected {
+  background-color: #ffd95a;
+  border: 2px solid #f9a825;
+}

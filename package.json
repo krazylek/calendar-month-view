@@ -10,13 +10,13 @@
   "author": "krazylek (http://pohl.fr)",
   "license": "MIT",
   "devDependencies": {
+    "d3-time-format": "^2.0.5",
+    "sheetify": "^6.1.0",
     "tape": "^4.7.0",
     "wzrd": "^1.5.0"
   },
   "dependencies": {
     "bel": "^5.0.2",
-    "calendar-month-array": "^2.0.0",
-    "d3-time-format": "^2.0.5",
-    "sheetify": "^6.1.0"
+    "calendar-month-array": "^2.0.0"
   }
 }

@@ -16,6 +16,7 @@ function getCalendar(date, opts) {
   options.siblingMonthDateTemplate = options.siblingMonthDateTemplate || options.dateTemplate
 
   var month = monthArray(date, {
+    weekStartDay: options.weekStartDay,
     formatHeader: format(options.headerContent, options.headerTemplate, options),
     formatDate: format(options.dateContent, options.dateTemplate, options),
     formatSiblingMonthDate: format(options.siblingMonthDateContent,options.siblingMonthDateTemplate, options),

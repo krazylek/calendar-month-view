@@ -14,10 +14,11 @@ function getFormatter(format, locale) {
   return d3TimeFormat.timeFormatLocale(locales[locale]).format(format)
 }
 
-function createCalendar(date, locale) {
+function createCalendar(date, locale, weekStartDay) {
   var headersFormat = getFormatter('%a', locale)
 
   return calendar(date, {
+    weekStartDay,
     headerContent: date => html`<span>${headersFormat(date)}</span>`
   })
 }
@@ -29,19 +30,19 @@ function createTitle(date, locale) {
 }
 
 var calDate = new Date()
-var title = html`<h2>I18N current month calendar, french, english and spanish</h2>`
+var title = html`<h2>I18N current month calendar, french, english (us) and spanish</h2>`
 var container = html`<div class="calendar-container multiple">
   <div>
     ${createTitle(calDate, 'fr')} 
-    ${createCalendar(calDate, 'fr')} 
+    ${createCalendar(calDate, 'fr', 1)} 
   </div>
   <div>
     ${createTitle(calDate, 'en')} 
-    ${createCalendar(calDate, 'en')} 
+    ${createCalendar(calDate, 'en', 0)} 
   </div>
   <div>
     ${createTitle(calDate, 'es')} 
-    ${createCalendar(calDate, 'es')} 
+    ${createCalendar(calDate, 'es', 1)} 
   </div>
 </div>`
 

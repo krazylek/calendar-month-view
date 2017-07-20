@@ -38,7 +38,7 @@ This produce an html table element:
 ```
 
 
-# Try it
+# try it
 
 Run
 
@@ -49,9 +49,9 @@ npm run example
 to start a demo page on port 9966.
 
 
-# Customization
+# customization
 
-## Custom day classnames 
+## custom day classnames 
 
 To add some styling to specific days, there is a `selected` option, 
 a map of calendar dates to classnames.
@@ -89,7 +89,7 @@ Check the examples in [selection](https://github.com/krazylek/calendar-month-arr
 or [marks](https://github.com/krazylek/calendar-month-array/tree/master/example/marks/).
 
 
-## Rewriting content
+## rewriting content
 
 The header cells and day cells content are customizable.
 Specify those options to get what you want inside the table th or td:
@@ -129,12 +129,12 @@ Result:
     ...
 
 ```
-## Advanced customization
+## advanced customization
 
 ...
 
 
-# I18N
+# i18n
 
 Internationalization is let to you, so you can use any i18n libray or just do it yourself.
 Usual way would be to specify `headerContent` in options:
@@ -164,11 +164,17 @@ Return a html table element for the month given in `date`, a `Date` instance.
 * `opts.weekStartDay` - set the first day of week, default 0 (Sunday). Monday would be 1.
 * `opts.noHeader` - do not display days name header.
 * `opts.selected` - specify how to format some cells, key is `dayOfMonth`, value is a string or array of classes to add for this day.
-* `opts.classPrefix` - prefix the classnames used in the project, default - `calendar-`.
+* `opts.classPrefix` - prefix the classnames used in the project, default is `calendar-`.
 * `opts.headerContent(date, info)` - custom header cell content, check [calendar-month-array API](https://github.com/krazylek/calendar-month-array#var-weeks--calendardate-opts) for details.
 * `opts.dateContent(date, info)` - custom date cell content.
 * `opts.siblingMonthDateContent(date, info)` - specific content when other month dates are displayed, defaults to `opts.dateContent`.
 
+
+# compatibility
+
+Using [yo-yoify](https://github.com/shama/yo-yoify) with `browserify`, this module should work fine on pretty old browsers.
+
+Examples and tests are written for more recent es6 browsers.
 
 
 # license

@@ -1,6 +1,6 @@
 # calendar-month-view
 
-Generates a html calendar 
+Generates a html calendar. Check the [examples](https://krazylek.github.io/calendar-month-view/)
 
 # example
 

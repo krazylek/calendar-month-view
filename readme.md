@@ -129,9 +129,82 @@ Result:
     ...
 
 ```
+
+
 ## advanced customization
 
-...
+For extreme case where full calendar customization is needed, there is the template options. 
+they are function that takes the content as input and let you override the container. 
+You could either return an html element or a function taking the same params as the content options in case date info are required.
+Check the [template.js file](https://github.com/krazylek/calendar-month-view/blob/master/template.js) to see the defaults.
+Keep in mind that for intensive customization, working directly with [calendar-month-array](https://github.com/krazylek/calendar-month-array) could be more efficient.
+
+Example:
+
+```js
+var cal = calendar(new Date(2017,6), {
+  headerTemplate: content => html`<div class="header">${content}</div>`,
+  dateTemplate: content => (date, info) => html`<div class=${info.siblingMonth ? 'inactive' : 'current' }>${content}</div>`,
+  containerTemplate: month => html`<div class="calendar-flex">
+    ${month.reduce((acc, n) => acc.concat(n))}
+  </div>`
+})
+```
+
+Result:
+
+```html
+<div class="calendar-flex">
+	<div class="header"><span>Sun</span></div>
+	<div class="header"><span>Mon</span></div>
+	<div class="header"><span>Tue</span></div>
+	<div class="header"><span>Wed</span></div>
+	<div class="header"><span>Thu</span></div>
+	<div class="header"><span>Fri</span></div>
+	<div class="header"><span>Sat</span></div>
+	<div class="inactive"><span>25</span></div>
+	<div class="inactive"><span>26</span></div>
+	<div class="inactive"><span>27</span></div>
+	<div class="inactive"><span>28</span></div>
+	<div class="inactive"><span>29</span></div>
+	<div class="inactive"><span>30</span></div>
+	<div class="current"><span>1</span></div>
+	<div class="current"><span>2</span></div>
+	...
+
+</div>
+```
+
+Complete example [here](https://github.com/krazylek/calendar-month-view/tree/master/example/custom-container).
+
+
+# styling
+
+No default styles are provided, check the example dir for more styling.
+
+Here is a minimal style:
+
+```css
+table.calendar-block {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid rgba(0,0,0,.05);
+}
+
+.calendar-block td,
+.calendar-block th {
+  font-size: 1em;
+  line-height: 1.8em;
+  height: 2.2em; 
+  min-width: 1em;
+  text-align:center;
+  border: 1px solid rgba(0,0,0,.05);
+}
+
+.calendar-inactive { 
+	color: rgba(0,0,0,.2); 
+}
+```
 
 
 # i18n
@@ -157,6 +230,7 @@ For a complete example, check [this file](https://github.com/krazylek/calendar-m
 var calendar = require('calendar-month-view')
 ```
 
+
 ## var cal = calendar(date, opts)
 
 Return a html table element for the month given in `date`, a `Date` instance.
@@ -168,6 +242,11 @@ Return a html table element for the month given in `date`, a `Date` instance.
 * `opts.headerContent(date, info)` - custom header cell content, check [calendar-month-array API](https://github.com/krazylek/calendar-month-array#var-weeks--calendardate-opts) for details.
 * `opts.dateContent(date, info)` - custom date cell content.
 * `opts.siblingMonthDateContent(date, info)` - specific content when other month dates are displayed, defaults to `opts.dateContent`.
+* `opts.headerTemplate(content, options) => `: Customize headers, content is header content specified in `opts.headerContent`, options provide a way to access `opts` object.	A
+  All template options return either an `Element` or `(date, info) => Element` function.
+* `opts.dateTemplate(content, options)` - same principle as `opts.headerTemplate`, but for dates.
+* `opts.siblingMonthateTemplate(content, options)` - customize other month dates container, defaults to `opts.dateTemplate`.
+* `opts.containerTemplate(month, options)`: customize the calendar container. `month` is an array with headers and week rows, which are themselves an array of each day elements.
 
 
 # compatibility

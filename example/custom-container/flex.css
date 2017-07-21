@@ -1,0 +1,25 @@
+div.calendar-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.calendar-flex > div {
+  width: calc(100%/7);
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  line-height: 1.8em;
+  height: 2.2em; 
+  text-align: center;
+}
+
+div.inactive {
+  background-color: #eee;
+  color: #999;
+}
+
+.calendar-flex > div.header {
+  line-height: 2.6em;
+  color: #fff;
+  background-color: #c2185b;
+  font-variant: small-caps;
+}

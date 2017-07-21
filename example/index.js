@@ -1,7 +1,6 @@
-var html = require('bel')
+var css = require('sheetify')
 
-var stylesheet = html`<link rel="stylesheet" href="page.css">`
-document.head.appendChild(stylesheet)
+css('./page.css')
 
 require('./basic')
 require('./selection')

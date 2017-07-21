@@ -5,7 +5,7 @@ div.calendar-flex {
 }
 
 .calendar-flex > div {
-  width: calc(100%/7);
+  width: calc(99.9%/7);
   border-bottom: 1px solid rgba(0,0,0,.05);
   line-height: 1.8em;
   height: 2.2em; 

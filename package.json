@@ -1,6 +1,6 @@
 {
   "name": "calendar-month-view",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Minimalistic and customizable html calendar month",
   "main": "index.js",
   "scripts": {

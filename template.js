@@ -47,10 +47,12 @@ function containerTemplate(month, options)  {
     <tr>
       ${month[0]}
     </tr>`
-  var weeks = month.slice(1).map(row => html`
-    <tr>
-      ${row}
-    </tr>`)
+  var weeks = month.slice(1).map(function(row) {
+    return html`
+      <tr>
+        ${row}
+      </tr>`
+    })
 
   return html`
     <table class="${className}">

@@ -2,26 +2,22 @@
 var html = {}
 var calendar = require('../..')
 
-var cal = calendar(new Date())
-
-var title = (function () {
+module.exports = function() {
+  var cal = calendar(new Date())
+  var title = 'Basic current month calendar'
+  return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
-      var bel0 = document.createElement("h2")
-ac(bel0, ["Basic current month calendar"])
-      return bel0
-    }())
-var container = (function () {
-      
-      var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
-      var bel0 = document.createElement("div")
-bel0.setAttribute("class", "calendar-container")
+      var bel2 = document.createElement("section")
+var bel0 = document.createElement("h2")
 ac(bel0, [arguments[0]])
-      return bel0
-    }(cal))
-
-document.body.appendChild(title)
-document.body.appendChild(container)
+var bel1 = document.createElement("div")
+bel1.setAttribute("class", "calendar-container")
+ac(bel1, [arguments[1]])
+ac(bel2, ["\n      ",bel0,"\n      ",bel1,"\n    "])
+      return bel2
+    }(title,cal))
+}
 
 },{"../..":7,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17}],2:[function(require,module,exports){
 var calendar = require('../..')
@@ -30,8 +26,9 @@ var css = 0
 
 ;((require('sheetify/insert')("div.calendar-flex {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n}\n\n.calendar-flex > div {\n  width: calc(99.9%/7);\n  border-bottom: 1px solid rgba(0,0,0,.05);\n  line-height: 1.8em;\n  height: 2.2em; \n  text-align: center;\n}\n\ndiv.inactive {\n  background-color: #eee;\n  color: #999;\n}\n\n.calendar-flex > div.header {\n  line-height: 2.6em;\n  color: #fff;\n  background-color: #c2185b;\n  font-variant: small-caps;\n}") || true) && "_724da832")
 
-var cal = calendar(new Date(2017,6), {
-  headerTemplate: content => (function () {
+module.exports = function() {
+  var cal = calendar(new Date(2017,6), {
+    headerTemplate: content => (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
       var bel0 = document.createElement("div")
@@ -39,7 +36,7 @@ bel0.setAttribute("class", "header")
 ac(bel0, [arguments[0]])
       return bel0
     }(content)),
-  dateTemplate: content => (date, info) => (function () {
+    dateTemplate: content => (date, info) => (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
       var bel0 = document.createElement("div")
@@ -47,34 +44,29 @@ bel0.setAttribute("class", arguments[0])
 ac(bel0, [arguments[1]])
       return bel0
     }(info.siblingMonth ? 'inactive' : 'current',content)),
-  containerTemplate: month => (function () {
+    containerTemplate: month => (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
       var bel0 = document.createElement("div")
 bel0.setAttribute("class", "calendar-flex")
-ac(bel0, ["\n    ",arguments[0],"\n  "])
+ac(bel0, ["\n      ",arguments[0],"\n    "])
       return bel0
     }(month.reduce((acc, n) => acc.concat(n))))
-})
-
-var title = (function () {
+  })
+  var title = 'Customizing templates to display div/flexbox calendar'
+  return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
-      var bel0 = document.createElement("h2")
-ac(bel0, ["Customizing templates to display div/flexbox calendar"])
-      return bel0
-    }())
-var container = (function () {
-      
-      var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
-      var bel0 = document.createElement("div")
-bel0.setAttribute("class", "calendar-container custom-container")
+      var bel2 = document.createElement("section")
+var bel0 = document.createElement("h2")
 ac(bel0, [arguments[0]])
-      return bel0
-    }(cal))
-
-document.body.appendChild(title)
-document.body.appendChild(container)
+var bel1 = document.createElement("div")
+bel1.setAttribute("class", "calendar-container custom-container")
+ac(bel1, [arguments[1]])
+ac(bel2, ["\n      ",bel0,"\n      ",bel1,"\n    "])
+      return bel2
+    }(title,cal))
+}
 
 },{"../..":7,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17,"sheetify/insert":15}],3:[function(require,module,exports){
 var calendar = require('../..')
@@ -120,81 +112,95 @@ ac(bel0, [arguments[0]])
     }(format(date)))
 }
 
-var calDate = new Date()
-var title = (function () {
+module.exports = function() {
+  var calDate = new Date()
+  var title = 'I18N current month calendar, french, english (us) and spanish'
+  return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
-      var bel0 = document.createElement("h2")
-ac(bel0, ["I18N current month calendar, french, english (us) and spanish"])
-      return bel0
-    }())
-var container = (function () {
-      
-      var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
-      var bel3 = document.createElement("div")
-bel3.setAttribute("class", "calendar-container multiple")
-var bel0 = document.createElement("div")
-ac(bel0, ["\n    ",arguments[0]," \n    ",arguments[1]," \n  "])
+      var bel5 = document.createElement("section")
+var bel0 = document.createElement("h2")
+ac(bel0, [arguments[0]])
+var bel4 = document.createElement("div")
+bel4.setAttribute("class", "calendar-container multiple")
 var bel1 = document.createElement("div")
-ac(bel1, ["\n    ",arguments[2]," \n    ",arguments[3]," \n  "])
+ac(bel1, ["\n        ",arguments[1]," \n        ",arguments[2]," \n      "])
 var bel2 = document.createElement("div")
-ac(bel2, ["\n    ",arguments[4]," \n    ",arguments[5]," \n  "])
-ac(bel3, ["\n  ",bel0,"\n  ",bel1,"\n  ",bel2,"\n"])
-      return bel3
-    }(createTitle(calDate, 'fr'),createCalendar(calDate, 'fr', 1),createTitle(calDate, 'en'),createCalendar(calDate, 'en', 0),createTitle(calDate, 'es'),createCalendar(calDate, 'es', 1)))
-
-document.body.appendChild(title)
-document.body.appendChild(container)
+ac(bel2, ["\n        ",arguments[3]," \n        ",arguments[4]," \n      "])
+var bel3 = document.createElement("div")
+ac(bel3, ["\n        ",arguments[5]," \n        ",arguments[6]," \n      "])
+ac(bel4, ["\n      ",bel1,"\n      ",bel2,"\n      ",bel3,"\n    "])
+ac(bel5, ["\n    ",bel0,"\n    ",bel4,"\n  "])
+      return bel5
+    }(title,createTitle(calDate, 'fr'),createCalendar(calDate, 'fr', 1),createTitle(calDate, 'en'),createCalendar(calDate, 'en', 0),createTitle(calDate, 'es'),createCalendar(calDate, 'es', 1)))
+}
 
 },{"../..":7,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17,"d3-time-format":9,"d3-time-format/locale/en-US.json":10,"d3-time-format/locale/es-ES.json":11,"d3-time-format/locale/fr-FR.json":12,"sheetify/insert":15}],4:[function(require,module,exports){
+var html = {}
 var css = 0
 
-;((require('sheetify/insert')("/** very basic calendar styling */\ntable.calendar-block {\n  border-collapse: collapse;\n  border-spacing: 0;\n  border: 1px solid rgba(0,0,0,.05);\n  width: 100%;\n}\n\n.calendar-block td,\n.calendar-block th {\n  font-size: 1em;\n  line-height: 1.8em;\n  height: 2.2em; \n  min-width: 1em;\n  text-align:center;\n  border: 1px solid rgba(0,0,0,.05);\n}\n\n.calendar-inactive { \n\tcolor: rgba(0,0,0,.2); \n}\n\n/** page style */\nbody {\n  font-family: sans-serif;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n\n.calendar-container {\n  font-weight: 100;\n  min-width: 340px;\n}\n\n.calendar-block th {\n  line-height: 2.6em;\n  color: #fff;\n  background-color: #03a9f4;\n  font-variant: small-caps;\n}") || true) && "_519b4e9c")
+;((require('sheetify/insert')("/** very basic calendar styling */\ntable.calendar-block {\n  border-collapse: collapse;\n  border-spacing: 0;\n  border: 1px solid rgba(0,0,0,.05);\n  width: 100%;\n}\n\n.calendar-block td,\n.calendar-block th {\n  font-size: 1em;\n  line-height: 1.8em;\n  height: 2.2em; \n  min-width: 1em;\n  text-align:center;\n  border: 1px solid rgba(0,0,0,.05);\n}\n\n.calendar-inactive { \n\tcolor: rgba(0,0,0,.2); \n}\n\n/** page style */\nbody {\n  font-family: sans-serif;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n\nh2 {\n\tmargin-top: 3em;\n\tfont-weight: 100;\n}\n\n.calendar-container {\n  font-weight: 100;\n  min-width: 340px;\n}\n\n.calendar-block th {\n  line-height: 2.6em;\n  color: #fff;\n  background-color: #03a9f4;\n  font-variant: small-caps;\n}\n\nfooter {\n\tpadding: 2em;\n\tbackground-color: #eee;\n\tmargin: 3em 0 1em 0;\n\talign-items: stretch;\n\ttext-align: center;\n}") || true) && "_5297d05a")
 
-require('./basic')
-require('./selection')
-require('./marks')
-require('./i18n')
-require('./custom-container')
+function render() {
+  return (function () {
+      
+      var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var bel6 = document.createElement("body")
+var bel0 = document.createElement("h1")
+ac(bel0, ["calendar-month-view examples"])
+var bel5 = document.createElement("footer")
+var bel2 = document.createElement("p")
+var bel1 = document.createElement("a")
+bel1.setAttribute("href", "https://github.com/krazylek/calendar-month-view")
+ac(bel1, ["Github"])
+ac(bel2, ["Contribute on ",bel1])
+var bel4 = document.createElement("p")
+var bel3 = document.createElement("a")
+bel3.setAttribute("href", "http://pohl.fr")
+ac(bel3, ["Benoit Pohl"])
+ac(bel4, ["Created by ",bel3," (c) 2017"])
+ac(bel5, ["\n        ",bel2,"\n        ",bel4,"\n      "])
+ac(bel6, ["\n      ",bel0,"\n         \n      ",arguments[0],"\n      ",arguments[1],"\n      ",arguments[2],"\n      ",arguments[3],"\n      ",arguments[4],"\n\n      ",bel5,"\n    "])
+      return bel6
+    }(require('./basic')(),require('./selection')(),require('./marks')(),require('./i18n')(),require('./custom-container')()))
+}
 
-},{"./basic":1,"./custom-container":2,"./i18n":3,"./marks":5,"./selection":6,"sheetify/insert":15}],5:[function(require,module,exports){
+document.body = render()
+
+},{"./basic":1,"./custom-container":2,"./i18n":3,"./marks":5,"./selection":6,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17,"sheetify/insert":15}],5:[function(require,module,exports){
 var calendar = require('../..')
 var html = {}
 var css = 0
 
 ;((require('sheetify/insert')("/** some optional day customization */\n.calendar-container.marks .event span {,\n  font-weight: 700;\n  border-radius: 50%;\n  height: 1.8em;\n  width: 1.8em;\n  display: inline-block;\n  box-shadow: 0 1px 2px rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.2), 0 1px 8px 0 rgba(0,0,0,.12);\n}\n\n.calendar-container.marks .blue span {\n  background-color: #1e88e5;\n  color: #fff;\n}\n\n.calendar-container.marks .gray span {\n  background-color: #757575;\n  color: #fff;\n}\n\n.calendar-container.marks .green span {\n  background-color: #558B2F;\n  color: #fff;\n}\n\n.calendar-container.marks .yellow span {\n  background-color: #ffeb3b;\n}\n\n.calendar-container.marks .selected {\n  background-color: #67daff;\n}") || true) && "_e5f264a6")
 
-var cal = calendar(new Date(2017,6), {
-  selected: {
-    '-1': ['event', 'blue', 'selected'],
-    0: 'selected',
-    1: 'selected',
-    2: 'selected',
-    3: ['event', 'green', 'selected'],
-    4: 'selected',
-    8: ['event', 'yellow'],
-    25: ['event', 'gray']
-  }
-})
-
-var title = (function () {
+module.exports = function() {
+  var cal = calendar(new Date(2017,6), {
+    selected: {
+      '-1': ['event', 'blue', 'selected'],
+      0: 'selected',
+      1: 'selected',
+      2: 'selected',
+      3: ['event', 'green', 'selected'],
+      4: 'selected',
+      8: ['event', 'yellow'],
+      25: ['event', 'gray']
+    }
+  })
+  var title = 'July 2017 calendar with some marks'
+  return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
-      var bel0 = document.createElement("h2")
-ac(bel0, ["July 2017 calendar with some marks"])
-      return bel0
-    }())
-var container = (function () {
-      
-      var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
-      var bel0 = document.createElement("div")
-bel0.setAttribute("class", "calendar-container marks")
+      var bel2 = document.createElement("section")
+var bel0 = document.createElement("h2")
 ac(bel0, [arguments[0]])
-      return bel0
-    }(cal))
-
-document.body.appendChild(title)
-document.body.appendChild(container)
+var bel1 = document.createElement("div")
+bel1.setAttribute("class", "calendar-container marks")
+ac(bel1, [arguments[1]])
+ac(bel2, ["\n      ",bel0,"\n      ",bel1,"\n    "])
+      return bel2
+    }(title,cal))
+}
 
 },{"../..":7,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17,"sheetify/insert":15}],6:[function(require,module,exports){
 var calendar = require('../..')
@@ -203,32 +209,27 @@ var css = 0
 
 ;((require('sheetify/insert')(".calendar-container.date-selection .selected {\n  background-color: #ffd95a;\n  border: 2px solid #f9a825;\n}") || true) && "_e248bbc0")
 
-
-var calDate = new Date()
-var selection = {}
-selection[calDate.getDate()] = 'selected'
-var cal = calendar(calDate, {
-  selected: selection
-})
-
-var title = (function () {
+module.exports = function() {
+  var calDate = new Date()
+  var selection = {}
+  selection[calDate.getDate()] = 'selected'
+  var cal = calendar(calDate, {
+    selected: selection
+  })
+  var title = 'Current month calendar with current day selected'
+  return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
-      var bel0 = document.createElement("h2")
-ac(bel0, ["Current month calendar with current day selected"])
-      return bel0
-    }())
-var container = (function () {
-      
-      var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
-      var bel0 = document.createElement("div")
-bel0.setAttribute("class", "calendar-container date-selection")
+      var bel2 = document.createElement("section")
+var bel0 = document.createElement("h2")
 ac(bel0, [arguments[0]])
-      return bel0
-    }(cal))
-
-document.body.appendChild(title)
-document.body.appendChild(container)
+var bel1 = document.createElement("div")
+bel1.setAttribute("class", "calendar-container date-selection")
+ac(bel1, [arguments[1]])
+ac(bel2, ["\n      ",bel0,"\n      ",bel1,"\n    "])
+      return bel2
+    }(title,cal))
+}
 
 },{"../..":7,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17,"sheetify/insert":15}],7:[function(require,module,exports){
 var monthArray = require('calendar-month-array')
@@ -324,7 +325,7 @@ module.exports = function (date, opts) {
 
       row.push(format(currentDate, {
         dayOfMonth: currentDay, 
-        siblingMonth,
+        siblingMonth: siblingMonth,
         week: w,
         position: d
       }))
@@ -1432,6 +1433,8 @@ module.exports = require('insert-css')
 },{"insert-css":14}],16:[function(require,module,exports){
 module.exports = extend
 
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+
 function extend() {
     var target = {}
 
@@ -1439,7 +1442,7 @@ function extend() {
         var source = arguments[i]
 
         for (var key in source) {
-            if (source.hasOwnProperty(key)) {
+            if (hasOwnProperty.call(source, key)) {
                 target[key] = source[key]
             }
         }
@@ -1480,95 +1483,87 @@ module.exports = function yoyoifyAppendChild (el, childs) {
 var html = {}
 
 module.exports = {
-  headerContent: headerContent,
-  dateContent: dateContent,
-  containerTemplate: containerTemplate,
-  headerTemplate: headerTemplate,
-  dateTemplate: dateTemplate,
-}
-
-function headerTemplate(content, options) { 
-  if(options.noHeader)
-    return
-  return (function () {
-      
-      var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
-      var bel0 = document.createElement("th")
-ac(bel0, [arguments[0]])
-      return bel0
-    }(content))
-}
-
-function headerContent(date) { 
-  return (function () {
+  headerContent: function(date) { 
+    return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
       var bel0 = document.createElement("span")
 ac(bel0, [arguments[0]])
       return bel0
     }(date.toString().slice(0,3))) 
-}
-
-function dateTemplate(content, options)  { 
-  return function(date, info)  { 
-    var classList = []
-    var day = info.dayOfMonth
-
-    if(info.siblingMonth)
-      classList.push(options.classPrefix + 'inactive')
-    if(options.selected && options.selected.hasOwnProperty(day)) {
-      classList = classList.concat(options.selected[day])
-    }
-
-    var element = (function () {
+  },
+  headerTemplate: function(content, options) { 
+    if(options.noHeader)
+      return
+    return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
-      var bel0 = document.createElement("td")
+      var bel0 = document.createElement("th")
 ac(bel0, [arguments[0]])
       return bel0
     }(content))
-    if(classList.length)
-      element.className = classList.join(' ')
-
-    return element
-  }
-}
-
-function dateContent(date) { 
-  return (function () {
+  },
+  dateContent: function(date) { 
+    return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
       var bel0 = document.createElement("span")
 ac(bel0, [arguments[0]])
       return bel0
     }(date.getDate())) 
-}
+  },
+  dateTemplate: function(content, options)  { 
+    return function(date, info)  { 
+      var classList = []
+      var day = info.dayOfMonth
 
-function containerTemplate(month, options)  { 
-  var className = options.classPrefix + 'block'
-  var headers = (function () {
+      if(info.siblingMonth)
+        classList.push(options.classPrefix + 'inactive')
+      if(options.selected && options.selected.hasOwnProperty(day)) {
+        classList = classList.concat(options.selected[day])
+      }
+
+      var element = (function () {
+      
+      var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var bel0 = document.createElement("td")
+ac(bel0, [arguments[0]])
+      return bel0
+    }(content))
+      if(classList.length)
+        element.className = classList.join(' ')
+
+      return element
+    }
+  },
+  containerTemplate: function(month, options)  { 
+    var className = options.classPrefix + 'block'
+    var headers = (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
       var bel0 = document.createElement("tr")
-ac(bel0, ["\n      ",arguments[0],"\n    "])
+ac(bel0, [arguments[0]])
       return bel0
     }(month[0]))
-  var weeks = month.slice(1).map(row => (function () {
+    var weeks = month.slice(1).map(function(row) {
+      return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
       var bel0 = document.createElement("tr")
-ac(bel0, ["\n      ",arguments[0],"\n    "])
+ac(bel0, [arguments[0]])
       return bel0
-    }(row)))
+    }(row))
+    })
 
-  return (function () {
+    return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
       var bel0 = document.createElement("table")
 bel0.setAttribute("class", arguments[0])
-ac(bel0, ["\n      ",arguments[1]," \n      ",arguments[2],"\n    "])
+ac(bel0, ["\n        ",arguments[1]," \n        ",arguments[2],"\n      "])
       return bel0
     }(className,options.noHeader ? null : headers,weeks))
+  }
 }
 
 },{"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17}]},{},[4]);

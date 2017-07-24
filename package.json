@@ -1,7 +1,7 @@
 {
   "name": "calendar-month-view",
   "version": "0.0.1",
-  "description": "",
+  "description": "Minimalistic and customizable html calendar month",
   "main": "index.js",
   "scripts": {
     "test": "browserify test/test.js | jsdom-runner",
@@ -22,6 +22,6 @@
   },
   "dependencies": {
     "bel": "^5.0.2",
-    "calendar-month-array": "^2.0.0"
+    "calendar-month-array": "^2.0.2"
   }
 }

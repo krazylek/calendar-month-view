@@ -29,22 +29,25 @@ function createTitle(date, locale) {
   return html`<h3>${format(date)}</h3>`
 }
 
-var calDate = new Date()
-var title = html`<h2>I18N current month calendar, french, english (us) and spanish</h2>`
-var container = html`<div class="calendar-container multiple">
-  <div>
-    ${createTitle(calDate, 'fr')} 
-    ${createCalendar(calDate, 'fr', 1)} 
-  </div>
-  <div>
-    ${createTitle(calDate, 'en')} 
-    ${createCalendar(calDate, 'en', 0)} 
-  </div>
-  <div>
-    ${createTitle(calDate, 'es')} 
-    ${createCalendar(calDate, 'es', 1)} 
-  </div>
-</div>`
-
-document.body.appendChild(title)
-document.body.appendChild(container)
+module.exports = function() {
+  var calDate = new Date()
+  var title = 'I18N current month calendar, french, english (us) and spanish'
+  return html`
+    <section>
+    <h2>${title}</h2>
+    <div class="calendar-container multiple">
+      <div>
+        ${createTitle(calDate, 'fr')} 
+        ${createCalendar(calDate, 'fr', 1)} 
+      </div>
+      <div>
+        ${createTitle(calDate, 'en')} 
+        ${createCalendar(calDate, 'en', 0)} 
+      </div>
+      <div>
+        ${createTitle(calDate, 'es')} 
+        ${createCalendar(calDate, 'es', 1)} 
+      </div>
+    </div>
+  </section>`
+}

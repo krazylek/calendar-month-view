@@ -28,6 +28,11 @@ body {
   justify-content: center;
 }
 
+h2 {
+	margin-top: 3em;
+	font-weight: 100;
+}
+
 .calendar-container {
   font-weight: 100;
   min-width: 340px;
@@ -40,3 +45,10 @@ body {
   font-variant: small-caps;
 }
 
+footer {
+	padding: 2em;
+	background-color: #eee;
+	margin: 3em 0 1em 0;
+	align-items: stretch;
+	text-align: center;
+}

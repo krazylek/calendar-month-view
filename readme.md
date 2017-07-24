@@ -1,6 +1,6 @@
 # calendar-month-view
 
-Generates a html calendar. Check the [examples](https://krazylek.github.io/calendar-month-view/)
+Creates an html structure to display a calendar month.
 
 # example
 
@@ -47,6 +47,8 @@ npm run example
 ```
 
 to start a demo page on port 9966.
+
+Or check the [demo page](https://krazylek.github.io/calendar-month-view/)
 
 
 # customization

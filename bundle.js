@@ -8,6 +8,7 @@ module.exports = function() {
   return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel2 = document.createElement("section")
 var bel0 = document.createElement("h2")
 ac(bel0, [arguments[0]])
@@ -19,7 +20,7 @@ ac(bel2, ["\n      ",bel0,"\n      ",bel1,"\n    "])
     }(title,cal))
 }
 
-},{"../..":7,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17}],2:[function(require,module,exports){
+},{"../..":7,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js":18}],2:[function(require,module,exports){
 var calendar = require('../..')
 var html = {}
 var css = 0
@@ -31,6 +32,7 @@ module.exports = function() {
     headerTemplate: content => (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel0 = document.createElement("div")
 bel0.setAttribute("class", "header")
 ac(bel0, [arguments[0]])
@@ -39,6 +41,7 @@ ac(bel0, [arguments[0]])
     dateTemplate: content => (date, info) => (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel0 = document.createElement("div")
 bel0.setAttribute("class", arguments[0])
 ac(bel0, [arguments[1]])
@@ -47,6 +50,7 @@ ac(bel0, [arguments[1]])
     containerTemplate: month => (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel0 = document.createElement("div")
 bel0.setAttribute("class", "calendar-flex")
 ac(bel0, ["\n      ",arguments[0],"\n    "])
@@ -57,6 +61,7 @@ ac(bel0, ["\n      ",arguments[0],"\n    "])
   return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel2 = document.createElement("section")
 var bel0 = document.createElement("h2")
 ac(bel0, [arguments[0]])
@@ -68,7 +73,7 @@ ac(bel2, ["\n      ",bel0,"\n      ",bel1,"\n    "])
     }(title,cal))
 }
 
-},{"../..":7,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17,"sheetify/insert":15}],3:[function(require,module,exports){
+},{"../..":7,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js":18,"sheetify/insert":15}],3:[function(require,module,exports){
 var calendar = require('../..')
 var html = {}
 var css = 0
@@ -93,6 +98,7 @@ function createCalendar(date, locale, weekStartDay) {
     headerContent: date => (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel0 = document.createElement("span")
 ac(bel0, [arguments[0]])
       return bel0
@@ -106,6 +112,7 @@ function createTitle(date, locale) {
   return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel0 = document.createElement("h3")
 ac(bel0, [arguments[0]])
       return bel0
@@ -118,6 +125,7 @@ module.exports = function() {
   return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel5 = document.createElement("section")
 var bel0 = document.createElement("h2")
 ac(bel0, [arguments[0]])
@@ -135,9 +143,24 @@ ac(bel5, ["\n    ",bel0,"\n    ",bel4,"\n  "])
     }(title,createTitle(calDate, 'fr'),createCalendar(calDate, 'fr', 1),createTitle(calDate, 'en'),createCalendar(calDate, 'en', 0),createTitle(calDate, 'es'),createCalendar(calDate, 'es', 1)))
 }
 
-},{"../..":7,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17,"d3-time-format":9,"d3-time-format/locale/en-US.json":10,"d3-time-format/locale/es-ES.json":11,"d3-time-format/locale/fr-FR.json":12,"sheetify/insert":15}],4:[function(require,module,exports){
+},{"../..":7,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js":18,"d3-time-format":9,"d3-time-format/locale/en-US.json":10,"d3-time-format/locale/es-ES.json":11,"d3-time-format/locale/fr-FR.json":12,"sheetify/insert":15}],4:[function(require,module,exports){
 var html = {}
 var css = 0
+
+function sourceLink(example) {
+  var href = `https://github.com/krazylek/calendar-month-view/tree/master/example/${example}/index.js` 
+  return (function () {
+      
+      var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
+      var bel1 = document.createElement("p")
+var bel0 = document.createElement("a")
+bel0.setAttribute("href", arguments[0])
+ac(bel0, ["View sources"])
+ac(bel1, [bel0])
+      return bel1
+    }(href))
+}
 
 ;((require('sheetify/insert')("/** very basic calendar styling */\ntable.calendar-block {\n  border-collapse: collapse;\n  border-spacing: 0;\n  border: 1px solid rgba(0,0,0,.05);\n  width: 100%;\n}\n\n.calendar-block td,\n.calendar-block th {\n  font-size: 1em;\n  line-height: 1.8em;\n  height: 2.2em; \n  min-width: 1em;\n  text-align:center;\n  border: 1px solid rgba(0,0,0,.05);\n}\n\n.calendar-inactive { \n\tcolor: rgba(0,0,0,.2); \n}\n\n/** page style */\nbody {\n  font-family: sans-serif;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n\nh2 {\n\tmargin-top: 3em;\n\tfont-weight: 100;\n}\n\n.calendar-container {\n  font-weight: 100;\n  min-width: 340px;\n}\n\n.calendar-block th {\n  line-height: 2.6em;\n  color: #fff;\n  background-color: #03a9f4;\n  font-variant: small-caps;\n}\n\nfooter {\n\tpadding: 2em;\n\tbackground-color: #eee;\n\tmargin: 3em 0 1em 0;\n\talign-items: stretch;\n\ttext-align: center;\n}") || true) && "_5297d05a")
 
@@ -145,6 +168,7 @@ function render() {
   return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel6 = document.createElement("body")
 var bel0 = document.createElement("h1")
 ac(bel0, ["calendar-month-view examples"])
@@ -160,14 +184,15 @@ bel3.setAttribute("href", "http://pohl.fr")
 ac(bel3, ["Benoit Pohl"])
 ac(bel4, ["Created by ",bel3," (c) 2017"])
 ac(bel5, ["\n        ",bel2,"\n        ",bel4,"\n      "])
-ac(bel6, ["\n      ",bel0,"\n         \n      ",arguments[0],"\n      ",arguments[1],"\n      ",arguments[2],"\n      ",arguments[3],"\n      ",arguments[4],"\n\n      ",bel5,"\n    "])
+ac(bel6, ["\n      ",bel0,"\n         \n      ",arguments[0],"\n      ",arguments[1],"\n\n      ",arguments[2],"\n      ",arguments[3],"\n      \n      ",arguments[4],"\n      ",arguments[5],"\n      \n      ",arguments[6],"\n      ",arguments[7],"\n      \n      ",arguments[8],"\n      ",arguments[9],"\n\n      ",bel5,"\n    "])
       return bel6
-    }(require('./basic')(),require('./selection')(),require('./marks')(),require('./i18n')(),require('./custom-container')()))
+    }(require('./basic')(),sourceLink('basic'),require('./selection')(),sourceLink('selection'),require('./marks')(),sourceLink('marks'),require('./i18n')(),sourceLink('i18n'),require('./custom-container')(),sourceLink('custom-container')))
 }
 
 document.body = render()
 
-},{"./basic":1,"./custom-container":2,"./i18n":3,"./marks":5,"./selection":6,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17,"sheetify/insert":15}],5:[function(require,module,exports){
+
+},{"./basic":1,"./custom-container":2,"./i18n":3,"./marks":5,"./selection":6,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js":18,"sheetify/insert":15}],5:[function(require,module,exports){
 var calendar = require('../..')
 var html = {}
 var css = 0
@@ -191,6 +216,7 @@ module.exports = function() {
   return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel2 = document.createElement("section")
 var bel0 = document.createElement("h2")
 ac(bel0, [arguments[0]])
@@ -202,7 +228,7 @@ ac(bel2, ["\n      ",bel0,"\n      ",bel1,"\n    "])
     }(title,cal))
 }
 
-},{"../..":7,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17,"sheetify/insert":15}],6:[function(require,module,exports){
+},{"../..":7,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js":18,"sheetify/insert":15}],6:[function(require,module,exports){
 var calendar = require('../..')
 var html = {}
 var css = 0
@@ -220,6 +246,7 @@ module.exports = function() {
   return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel2 = document.createElement("section")
 var bel0 = document.createElement("h2")
 ac(bel0, [arguments[0]])
@@ -231,7 +258,7 @@ ac(bel2, ["\n      ",bel0,"\n      ",bel1,"\n    "])
     }(title,cal))
 }
 
-},{"../..":7,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17,"sheetify/insert":15}],7:[function(require,module,exports){
+},{"../..":7,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js":18,"sheetify/insert":15}],7:[function(require,module,exports){
 var monthArray = require('calendar-month-array')
 var extend = require('xtend')
 var defaultRenderer = require('./template')
@@ -267,7 +294,7 @@ function format(renderContent, renderTemplate, options) {
   }
 }
 
-},{"./template":18,"calendar-month-array":8,"xtend":16}],8:[function(require,module,exports){
+},{"./template":19,"calendar-month-array":8,"xtend":16}],8:[function(require,module,exports){
 /**
  * Returns an array of weeks, each containing an array of dates
  *
@@ -310,8 +337,9 @@ module.exports = function (date, opts) {
   var weekStartDay = opts.weekStartDay || 0
   var formatDate = opts.formatDate || function (date) { return date }
   var formatSiblingMonthDate = opts.formatSiblingMonthDate || formatDate
-  var day = 1 - (7 + first.getDay() - weekStartDay) % 7
-  var weeks = Math.ceil((last.getDate() - day) / 7)
+  var firstDaysToComplete = (7 + first.getDay() - weekStartDay) % 7
+  var day = 1 - firstDaysToComplete
+  var weeks = Math.ceil((last.getDate() + firstDaysToComplete) / 7)
   var lines = []
   var headers = []
 
@@ -356,7 +384,7 @@ module.exports = function (date, opts) {
 }
 
 },{}],9:[function(require,module,exports){
-// https://d3js.org/d3-time-format/ Version 2.0.5. Copyright 2017 Mike Bostock.
+// https://d3js.org/d3-time-format/ Version 2.1.0. Copyright 2017 Mike Bostock.
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-time')) :
 	typeof define === 'function' && define.amd ? define(['exports', 'd3-time'], factory) :
@@ -414,6 +442,7 @@ function formatLocale(locale) {
     "c": null,
     "d": formatDayOfMonth,
     "e": formatDayOfMonth,
+    "f": formatMicroseconds,
     "H": formatHour24,
     "I": formatHour12,
     "j": formatDayOfYear,
@@ -421,9 +450,13 @@ function formatLocale(locale) {
     "m": formatMonthNumber,
     "M": formatMinutes,
     "p": formatPeriod,
+    "Q": formatUnixTimestamp,
+    "s": formatUnixTimestampSeconds,
     "S": formatSeconds,
+    "u": formatWeekdayNumberMonday,
     "U": formatWeekNumberSunday,
-    "w": formatWeekdayNumber,
+    "V": formatWeekNumberISO,
+    "w": formatWeekdayNumberSunday,
     "W": formatWeekNumberMonday,
     "x": null,
     "X": null,
@@ -441,6 +474,7 @@ function formatLocale(locale) {
     "c": null,
     "d": formatUTCDayOfMonth,
     "e": formatUTCDayOfMonth,
+    "f": formatUTCMicroseconds,
     "H": formatUTCHour24,
     "I": formatUTCHour12,
     "j": formatUTCDayOfYear,
@@ -448,9 +482,13 @@ function formatLocale(locale) {
     "m": formatUTCMonthNumber,
     "M": formatUTCMinutes,
     "p": formatUTCPeriod,
+    "Q": formatUnixTimestamp,
+    "s": formatUnixTimestampSeconds,
     "S": formatUTCSeconds,
+    "u": formatUTCWeekdayNumberMonday,
     "U": formatUTCWeekNumberSunday,
-    "w": formatUTCWeekdayNumber,
+    "V": formatUTCWeekNumberISO,
+    "w": formatUTCWeekdayNumberSunday,
     "W": formatUTCWeekNumberMonday,
     "x": null,
     "X": null,
@@ -468,6 +506,7 @@ function formatLocale(locale) {
     "c": parseLocaleDateTime,
     "d": parseDayOfMonth,
     "e": parseDayOfMonth,
+    "f": parseMicroseconds,
     "H": parseHour24,
     "I": parseHour24,
     "j": parseDayOfYear,
@@ -475,9 +514,13 @@ function formatLocale(locale) {
     "m": parseMonthNumber,
     "M": parseMinutes,
     "p": parsePeriod,
+    "Q": parseUnixTimestamp,
+    "s": parseUnixTimestampSeconds,
     "S": parseSeconds,
+    "u": parseWeekdayNumberMonday,
     "U": parseWeekNumberSunday,
-    "w": parseWeekdayNumber,
+    "V": parseWeekNumberISO,
+    "w": parseWeekdayNumberSunday,
     "W": parseWeekNumberMonday,
     "x": parseLocaleDate,
     "X": parseLocaleTime,
@@ -526,16 +569,38 @@ function formatLocale(locale) {
   function newParse(specifier, newDate) {
     return function(string) {
       var d = newYear(1900),
-          i = parseSpecifier(d, specifier, string += "", 0);
+          i = parseSpecifier(d, specifier, string += "", 0),
+          week, day;
       if (i != string.length) return null;
+
+      // If a UNIX timestamp is specified, return it.
+      if ("Q" in d) return new Date(d.Q);
 
       // The am-pm flag is 0 for AM, and 1 for PM.
       if ("p" in d) d.H = d.H % 12 + d.p * 12;
 
       // Convert day-of-week and week-of-year to day-of-year.
-      if ("W" in d || "U" in d) {
-        if (!("w" in d)) d.w = "W" in d ? 1 : 0;
-        var day = "Z" in d ? utcDate(newYear(d.y)).getUTCDay() : newDate(newYear(d.y)).getDay();
+      if ("V" in d) {
+        if (d.V < 1 || d.V > 53) return null;
+        if (!("w" in d)) d.w = 1;
+        if ("Z" in d) {
+          week = utcDate(newYear(d.y)), day = week.getUTCDay();
+          week = day > 4 || day === 0 ? d3Time.utcMonday.ceil(week) : d3Time.utcMonday(week);
+          week = d3Time.utcDay.offset(week, (d.V - 1) * 7);
+          d.y = week.getUTCFullYear();
+          d.m = week.getUTCMonth();
+          d.d = week.getUTCDate() + (d.w + 6) % 7;
+        } else {
+          week = newDate(newYear(d.y)), day = week.getDay();
+          week = day > 4 || day === 0 ? d3Time.timeMonday.ceil(week) : d3Time.timeMonday(week);
+          week = d3Time.timeDay.offset(week, (d.V - 1) * 7);
+          d.y = week.getFullYear();
+          d.m = week.getMonth();
+          d.d = week.getDate() + (d.w + 6) % 7;
+        }
+      } else if ("W" in d || "U" in d) {
+        if (!("w" in d)) d.w = "u" in d ? d.u % 7 : "W" in d ? 1 : 0;
+        day = "Z" in d ? utcDate(newYear(d.y)).getUTCDay() : newDate(newYear(d.y)).getDay();
         d.m = 0;
         d.d = "W" in d ? (d.w + 6) % 7 + d.W * 7 - (day + 5) % 7 : d.w + d.U * 7 - (day + 6) % 7;
       }
@@ -679,7 +744,7 @@ function formatLocale(locale) {
 var pads = {"-": "", "_": " ", "0": "0"};
 var numberRe = /^\s*\d+/;
 var percentRe = /^%/;
-var requoteRe = /[\\\^\$\*\+\?\|\[\]\(\)\.\{\}]/g;
+var requoteRe = /[\\^$*+?|[\]().{}]/g;
 
 function pad(value, fill, width) {
   var sign = value < 0 ? "-" : "",
@@ -702,18 +767,28 @@ function formatLookup(names) {
   return map;
 }
 
-function parseWeekdayNumber(d, string, i) {
+function parseWeekdayNumberSunday(d, string, i) {
   var n = numberRe.exec(string.slice(i, i + 1));
   return n ? (d.w = +n[0], i + n[0].length) : -1;
 }
 
+function parseWeekdayNumberMonday(d, string, i) {
+  var n = numberRe.exec(string.slice(i, i + 1));
+  return n ? (d.u = +n[0], i + n[0].length) : -1;
+}
+
 function parseWeekNumberSunday(d, string, i) {
-  var n = numberRe.exec(string.slice(i));
+  var n = numberRe.exec(string.slice(i, i + 2));
   return n ? (d.U = +n[0], i + n[0].length) : -1;
 }
 
+function parseWeekNumberISO(d, string, i) {
+  var n = numberRe.exec(string.slice(i, i + 2));
+  return n ? (d.V = +n[0], i + n[0].length) : -1;
+}
+
 function parseWeekNumberMonday(d, string, i) {
-  var n = numberRe.exec(string.slice(i));
+  var n = numberRe.exec(string.slice(i, i + 2));
   return n ? (d.W = +n[0], i + n[0].length) : -1;
 }
 
@@ -728,7 +803,7 @@ function parseYear(d, string, i) {
 }
 
 function parseZone(d, string, i) {
-  var n = /^(Z)|([+-]\d\d)(?:\:?(\d\d))?/.exec(string.slice(i, i + 6));
+  var n = /^(Z)|([+-]\d\d)(?::?(\d\d))?/.exec(string.slice(i, i + 6));
   return n ? (d.Z = n[1] ? 0 : -(n[2] + (n[3] || "00")), i + n[0].length) : -1;
 }
 
@@ -767,9 +842,24 @@ function parseMilliseconds(d, string, i) {
   return n ? (d.L = +n[0], i + n[0].length) : -1;
 }
 
+function parseMicroseconds(d, string, i) {
+  var n = numberRe.exec(string.slice(i, i + 6));
+  return n ? (d.L = Math.floor(n[0] / 1000), i + n[0].length) : -1;
+}
+
 function parseLiteralPercent(d, string, i) {
   var n = percentRe.exec(string.slice(i, i + 1));
   return n ? i + n[0].length : -1;
+}
+
+function parseUnixTimestamp(d, string, i) {
+  var n = numberRe.exec(string.slice(i));
+  return n ? (d.Q = +n[0], i + n[0].length) : -1;
+}
+
+function parseUnixTimestampSeconds(d, string, i) {
+  var n = numberRe.exec(string.slice(i));
+  return n ? (d.Q = (+n[0]) * 1000, i + n[0].length) : -1;
 }
 
 function formatDayOfMonth(d, p) {
@@ -792,6 +882,10 @@ function formatMilliseconds(d, p) {
   return pad(d.getMilliseconds(), p, 3);
 }
 
+function formatMicroseconds(d, p) {
+  return formatMilliseconds(d, p) + "000";
+}
+
 function formatMonthNumber(d, p) {
   return pad(d.getMonth() + 1, p, 2);
 }
@@ -804,11 +898,22 @@ function formatSeconds(d, p) {
   return pad(d.getSeconds(), p, 2);
 }
 
+function formatWeekdayNumberMonday(d) {
+  var day = d.getDay();
+  return day === 0 ? 7 : day;
+}
+
 function formatWeekNumberSunday(d, p) {
   return pad(d3Time.timeSunday.count(d3Time.timeYear(d), d), p, 2);
 }
 
-function formatWeekdayNumber(d) {
+function formatWeekNumberISO(d, p) {
+  var day = d.getDay();
+  d = (day >= 4 || day === 0) ? d3Time.timeThursday(d) : d3Time.timeThursday.ceil(d);
+  return pad(d3Time.timeThursday.count(d3Time.timeYear(d), d) + (d3Time.timeYear(d).getDay() === 4), p, 2);
+}
+
+function formatWeekdayNumberSunday(d) {
   return d.getDay();
 }
 
@@ -851,6 +956,10 @@ function formatUTCMilliseconds(d, p) {
   return pad(d.getUTCMilliseconds(), p, 3);
 }
 
+function formatUTCMicroseconds(d, p) {
+  return formatUTCMilliseconds(d, p) + "000";
+}
+
 function formatUTCMonthNumber(d, p) {
   return pad(d.getUTCMonth() + 1, p, 2);
 }
@@ -863,11 +972,22 @@ function formatUTCSeconds(d, p) {
   return pad(d.getUTCSeconds(), p, 2);
 }
 
+function formatUTCWeekdayNumberMonday(d) {
+  var dow = d.getUTCDay();
+  return dow === 0 ? 7 : dow;
+}
+
 function formatUTCWeekNumberSunday(d, p) {
   return pad(d3Time.utcSunday.count(d3Time.utcYear(d), d), p, 2);
 }
 
-function formatUTCWeekdayNumber(d) {
+function formatUTCWeekNumberISO(d, p) {
+  var day = d.getUTCDay();
+  d = (day >= 4 || day === 0) ? d3Time.utcThursday(d) : d3Time.utcThursday.ceil(d);
+  return pad(d3Time.utcThursday.count(d3Time.utcYear(d), d) + (d3Time.utcYear(d).getUTCDay() === 4), p, 2);
+}
+
+function formatUTCWeekdayNumberSunday(d) {
   return d.getUTCDay();
 }
 
@@ -891,7 +1011,15 @@ function formatLiteralPercent() {
   return "%";
 }
 
-var locale$1;
+function formatUnixTimestamp(d) {
+  return +d;
+}
+
+function formatUnixTimestampSeconds(d) {
+  return Math.floor(+d / 1000);
+}
+
+var locale;
 
 
 
@@ -909,12 +1037,12 @@ defaultLocale({
 });
 
 function defaultLocale(definition) {
-  locale$1 = formatLocale(definition);
-  exports.timeFormat = locale$1.format;
-  exports.timeParse = locale$1.parse;
-  exports.utcFormat = locale$1.utcFormat;
-  exports.utcParse = locale$1.utcParse;
-  return locale$1;
+  locale = formatLocale(definition);
+  exports.timeFormat = locale.format;
+  exports.timeParse = locale.parse;
+  exports.utcFormat = locale.utcFormat;
+  exports.utcParse = locale.utcParse;
+  return locale;
 }
 
 var isoSpecifier = "%Y-%m-%dT%H:%M:%S.%LZ";
@@ -1480,6 +1608,29 @@ module.exports = function yoyoifyAppendChild (el, childs) {
 }
 
 },{}],18:[function(require,module,exports){
+module.exports = function yoyoifySetAttribute (el, attr, value) {
+  if (typeof attr === 'object') {
+    for (var i in attr) {
+      if (attr.hasOwnProperty(i)) {
+        yoyoifySetAttribute(el, i, attr[i])
+      }
+    }
+    return
+  }
+  if (!attr) return
+  if (attr === 'className') attr = 'class'
+  if (attr === 'htmlFor') attr = 'for'
+  if (attr.slice(0, 2) === 'on') {
+    el[attr] = value
+  } else {
+    // assume a boolean attribute if the value === true
+    // no need to do typeof because "false" would've caused an early return
+    if (value === true) value = attr
+    el.setAttribute(attr, value)
+  }
+}
+
+},{}],19:[function(require,module,exports){
 var html = {}
 
 module.exports = {
@@ -1487,6 +1638,7 @@ module.exports = {
     return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel0 = document.createElement("span")
 ac(bel0, [arguments[0]])
       return bel0
@@ -1498,6 +1650,7 @@ ac(bel0, [arguments[0]])
     return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel0 = document.createElement("th")
 ac(bel0, [arguments[0]])
       return bel0
@@ -1507,6 +1660,7 @@ ac(bel0, [arguments[0]])
     return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel0 = document.createElement("span")
 ac(bel0, [arguments[0]])
       return bel0
@@ -1526,6 +1680,7 @@ ac(bel0, [arguments[0]])
       var element = (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel0 = document.createElement("td")
 ac(bel0, [arguments[0]])
       return bel0
@@ -1541,6 +1696,7 @@ ac(bel0, [arguments[0]])
     var headers = (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel0 = document.createElement("tr")
 ac(bel0, [arguments[0]])
       return bel0
@@ -1549,6 +1705,7 @@ ac(bel0, [arguments[0]])
       return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel0 = document.createElement("tr")
 ac(bel0, [arguments[0]])
       return bel0
@@ -1558,6 +1715,7 @@ ac(bel0, [arguments[0]])
     return (function () {
       
       var ac = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js')
+      var sa = require('/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js')
       var bel0 = document.createElement("table")
 bel0.setAttribute("class", arguments[0])
 ac(bel0, ["\n        ",arguments[1]," \n        ",arguments[2],"\n      "])
@@ -1566,4 +1724,4 @@ ac(bel0, ["\n        ",arguments[1]," \n        ",arguments[2],"\n      "])
   }
 }
 
-},{"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17}]},{},[4]);
+},{"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/appendChild.js":17,"/mnt/c/Users/benoit/repo/calendar-month-view/node_modules/yo-yoify/lib/setAttribute.js":18}]},{},[4]);
